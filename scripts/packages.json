@@ -1,0 +1,24 @@
+{
+   "minimalpackages":[
+	"code",
+	"curl",
+	"dconf-editor",
+	"flameshot",	
+	"fonts-firacode",
+	"fzf",
+	"git",
+    	"htop",
+	"neofetch",
+	"neovim",
+	"nitrogen",
+	"obs-studio",
+	"powerline",
+    	"tmux",
+	"vlc",
+	"xclip"
+   ],
+   "additionalpackages":[
+	   "nvidia-driver-470",
+	   "nvidia-cuda-toolkit"
+   ]
+}

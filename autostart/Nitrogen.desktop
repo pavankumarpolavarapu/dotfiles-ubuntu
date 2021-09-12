@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/pavankumarp/.dotfiles/scripts/startup.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=ReloadBackground
+Name=ReloadBackground
+Comment[en_US]=Reload Background Image
+Comment=Reload Background Image
