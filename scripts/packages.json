@@ -7,15 +7,18 @@
 	"fonts-firacode",
 	"fzf",
 	"git",
-    	"htop",
+	"htop",
 	"neofetch",
 	"neovim",
 	"nitrogen",
 	"obs-studio",
 	"powerline",
-    	"tmux",
+	"texlive-latex-extra",
+	"texlive-math-extra",
+	"tmux",
 	"vlc",
-	"xclip"
+	"xclip",
+	"zathura"
    ],
    "additionalpackages":[
 	   "nvidia-driver-470",
