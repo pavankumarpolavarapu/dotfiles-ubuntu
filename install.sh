@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function linker(){
-	~/.dotfiles/linker.sh -t "$1" -l "$2" -d "$333"
+	~/.dotfiles/linker.sh -t "$1" -l "$2" -d "$3"
 }
 linker soft ~/.dotfiles/wallpapers ~/Pictures/wallpapers
 linker soft ~/.dotfiles/nitrogen ~/.config/nitrogen

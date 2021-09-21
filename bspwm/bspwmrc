@@ -2,7 +2,8 @@
 
 sxhkd &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor DP-0 -d I II III IV V
+bspc monitor DP-4 -d VI VII VIII IX X
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -16,3 +17,8 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+
+xset -dpms
+xset s off
+xsetroot -cursor_name left_ptr
+nitrogen --restore &
