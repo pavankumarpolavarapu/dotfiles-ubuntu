@@ -1,9 +1,11 @@
 {
    "minimalpackages":[
+  "bspwm",
+  "build-essential",
 	"code",
 	"curl",
 	"dconf-editor",
-	"flameshot",	
+	"flameshot",
 	"fonts-firacode",
 	"fzf",
 	"git",
@@ -15,9 +17,11 @@
 	"powerline",
 	"texlive",
 	"texlive-latex-extra",
+  "timeshift",
 	"tmux",
 	"vlc",
 	"xclip",
+  "xcompmgr",
 	"zathura"
    ],
    "additionalpackages":[

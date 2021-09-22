@@ -8,7 +8,7 @@ sudo echo "@reboot root for a in /sys/bus/pci/devices/*; do echo 0 | tee -a $a/n
 
 # Appending Things to .bashrc
 if [ ! -f "$HOME/.bashrc" ]
-then 
+then
         echo "executing cat"
         cat <<EOF >> $HOME/.bashrc
 # If not running interactively, don't do anything
@@ -66,12 +66,23 @@ function apt-history(){
       esac
 }
 
-neofetch                                                                                                                                                                                             
-                                                                                                                                                                                                     
-powerline-daemon -q                                                                                                                                                                                  
-POWERLINE_BASH_CONTINUATION=1                                                                                                                                                                        
-POWERLINE_BASH_SELECT=1                                                                                                                                                                              
+neofetch
+
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
 . /usr/share/powerline/bindings/bash/powerline.sh
 
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+
+## Begin of Path Variables
+# Uncomment once yarn is installed using nvm
+#export PATH=$PATH:"$(yarn global bin)"
+## End of Path Variables
+
+## Aliases
+export WINDOWS="/media/pavankumarp/B6C651B8C6517A17/Users/pavan/Documents/Workspace"
 EOF
 fi

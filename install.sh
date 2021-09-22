@@ -9,3 +9,4 @@ linker soft ~/.dotfiles/.gitconfig ~/.gitconfig
 linker soft ~/.dotfiles/.tmux.conf ~/.tmux.conf
 linker soft ~/.dotfiles/autostart ~/.config/autostart
 linker soft ~/.dotfiles/nvim ~/.config/nvim
+linker soft ~/.dotfiles/fonts ~/.local/share/fonts
