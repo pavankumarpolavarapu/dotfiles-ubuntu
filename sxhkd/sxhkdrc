@@ -119,3 +119,18 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# Volume controls
+# Problem is when there are multiple Audio devices amixer is adjusting only built-in audio
+# pactl list-sinks | grep name: && pactl set-sink-volume <NAME_OF_SINK> +5% is an alternative
+XF86AudioRaiseVolume
+    # amixer set Master 5%+ unmute
+    pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+XF86AudioLowerVolume
+    # amixer set Master 5%- unmute
+    pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+XF86AudioMute
+    # amixer set Master toggle
+    pactl set-sink-volume @DEFAULT_SINK@ 0%

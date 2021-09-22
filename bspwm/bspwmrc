@@ -18,7 +18,19 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
+
+# Helps screen to say alive despite inactivity or say watching videos
 xset -dpms
 xset s off
+
+# Setting the pointer to left pointer
 xsetroot -cursor_name left_ptr
+
+# Restoring the Background Images
 nitrogen --restore &
+
+# Adjusting the Monitors Layout and Configuration
+~/.dotfiles/screenlayout.sh
+
+# A light weight compositor for Ubuntu. Used for Shadows & Transparency
+xcompmgr &
