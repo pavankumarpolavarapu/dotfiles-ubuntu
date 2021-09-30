@@ -84,5 +84,17 @@ alias pbpaste='xclip -selection clipboard -o'
 
 ## Aliases
 export WINDOWS="/media/pavankumarp/B6C651B8C6517A17/Users/pavan/Documents/Workspace"
+
+# Not completely updated the scripts for below execution
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
+cd () {
+    if builtin cd ${1:+"$@"} && [ -r ./.venv/bin/activate ]; then
+        . .venv/bin/activate
+    fi
+}
 EOF
 fi
