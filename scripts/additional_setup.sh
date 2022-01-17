@@ -96,5 +96,11 @@ cd () {
         . .venv/bin/activate
     fi
 }
+
+export HISTTIMEFORMAT='%F, %T '
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+export HISTCONTROL=ignoreboth:erasedups
+
 EOF
 fi
