@@ -125,16 +125,25 @@ super + {Left,Down,Up,Right}
 # pacmd list-sinks | grep name: && pactl set-sink-volume <NAME_OF_SINK> +5% is an alternative
 # alternatively pactl list sources or pactl list sinks will give same results
 XF86AudioRaiseVolume
-  $HOME/.dotfiles/scripts/volume-up.sh
+#	amixer set Master 5%+
+  	$HOME/.dotfiles/scripts/volume-up.sh
 
 XF86AudioLowerVolume
-  $HOME/.dotfiles/scripts/volume-down.sh
+#	amixer set Master 5%-
+  	$HOME/.dotfiles/scripts/volume-down.sh
 
 XF86AudioMute
-    for i in $(pactl list short sinks | awk '{print substr($0,0,1)}'); do pacmd set-sink-mute $i 0; done
+#	amixer set Master toggle
+    	for i in $(pactl list short sinks | awk '{print substr($0,0,1)}'); do pacmd set-sink-mute $i 0; done
+
+# brightness control
+XF86MonBrightnessDown
+	sudo xbacklight -dec 5
+XF86MonBrightnessUp
+	sudo xbacklight -inc 5
 
 ctrl + alt + w
-  bspc desktop -f 3 && /usr/lib/virtualbox/VirtualBoxVM --comment "Windows 10" --startvm "{03aba5a8-f286-4e1a-9ab1-a51df31afc87}"
+  	bspc desktop -f 3 && /usr/lib/virtualbox/VirtualBoxVM --comment "Windows 10" --startvm "{03aba5a8-f286-4e1a-9ab1-a51df31afc87}"
 
 super + shift + s
-  flameshot gui
+  	flameshot gui

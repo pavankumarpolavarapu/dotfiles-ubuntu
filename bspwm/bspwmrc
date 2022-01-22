@@ -2,8 +2,8 @@
 
 sxhkd &
 
-bspc monitor DP-0 -d 1 2 3 4 5
-bspc monitor DP-4 -d 6 7 8 9 0
+bspc monitor DP-4 -d I II III IV V 
+bspc monitor DP-0 -d VI VII VIII IX X
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -12,8 +12,11 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a Zathura state=tiled
-bspc rule -a obs desktop='^5' focus=on
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Google-chrome desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
 
 # Helps screen to say alive despite inactivity or say watching videos
 xset -dpms
@@ -23,10 +26,13 @@ xset s off
 xsetroot -cursor_name left_ptr
 
 # Restoring the Background Images
-nitrogen --restore &
+feh --randomize --bg-fill /home/pavankumarp/Pictures/wallpapers/*
 
 # Adjusting the Monitors Layout and Configuration
 ~/.dotfiles/screenlayout.sh
 
+# Launching Polybars
+$HOME/.config/polybar/launch.sh --cuts 
+
 # A light weight compositor for Ubuntu. Used for Shadows & Transparency
-xcompmgr &
+compton &
